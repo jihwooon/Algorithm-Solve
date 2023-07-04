@@ -1,4 +1,4 @@
-package programmers.coding.test;
+package programmers.coding.test.이것이코딩테스트다;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
