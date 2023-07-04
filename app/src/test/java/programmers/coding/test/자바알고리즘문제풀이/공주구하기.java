@@ -1,4 +1,4 @@
-package programmers.coding.test;
+package programmers.coding.test.자바알고리즘문제풀이;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
