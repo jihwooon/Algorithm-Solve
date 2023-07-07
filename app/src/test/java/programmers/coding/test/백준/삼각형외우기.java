@@ -1,4 +1,4 @@
-package programmers.coding.test;
+package programmers.coding.test.백준;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
