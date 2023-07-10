@@ -54,13 +54,11 @@ public class 선택정렬 {
         for (int i = 0; i < arr.length - 1; i++) {
             int idx = i;
             for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[idx]) {
+                if (less(arr[j], arr[idx])) {
                     idx = j;
                 }
 
-                int tmp = arr[i];
-                arr[i] = arr[idx];
-                arr[idx] = tmp;
+                exch(arr, i, idx);
             }
         }
         return arr;
@@ -71,6 +69,16 @@ public class 선택정렬 {
     public void result1() {
         assertThat(solution1(new int[]{13, 5, 11, 7, 23, 15})).isEqualTo(
             new int[]{5, 7, 11, 13, 15, 23});
+    }
+
+    private void exch(int[] arr, int i, int j) {
+        int t = arr[i];
+        arr[i] = arr[j];
+        arr[j] = t;
+    }
+
+    private boolean less(Comparable v, Comparable w) {
+        return v.compareTo(w) < 0;
     }
 
 }
