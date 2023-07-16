@@ -12,7 +12,6 @@ public class 스택 {
         private int N;
 
         private class Node {
-
             Integer data;
             Node next;
         }
