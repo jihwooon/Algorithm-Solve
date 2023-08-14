@@ -1,13 +1,13 @@
 /**
  * ## 미지의 것
  * 정수 N을 입력 받으면 자신의 앞 수보다 큰 수만 출력한다.
- * 
+ *
  * ## 자료
  * 정수 N
  * 자신의 앞 수 보다 큰 수
  * ## 조건
  * 자신의 앞수보다 큰 수만 출력이가능하다.
- * 
+ *
  * ## 계획
  * 1. 나열 된 수를 입력받는다.
  * 2. 첫번째 수를 배열에 입력한다.
@@ -20,22 +20,24 @@
  */
 
 const solution = (arr) => {
-    let answer = []
-    answer.push(arr[0])
-    
-    for(let i = 0; i < arr.length; i++) {
-      if (arr[i] > arr[i - 1]) {
-        answer.push(arr[i])
-      }
+  let answer = [];
+  answer.push(arr[0]);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > arr[i - 1]) {
+      answer.push(arr[i]);
     }
+  }
 
-    return answer
-}
+  return answer;
+};
 
-describe('큰수 출력하기', () => { 
+describe('큰수 출력하기', () => {
   context('자연수 N이 주어지면', () => {
-    it('자신의 바로 앞 수보다 큰 수만 출력한다.', ()=> {
-      expect(solution([7, 3, 9, 5, 6, 12])).toStrictEqual([7, 9, 6, 12])
-    })
-  })
-})
+    it('자신의 바로 앞 수보다 큰 수만 출력한다.', () => {
+      expect(solution([7, 3, 9, 5, 6, 12])).toStrictEqual([
+        7, 9, 6, 12,
+      ]);
+    });
+  });
+});
