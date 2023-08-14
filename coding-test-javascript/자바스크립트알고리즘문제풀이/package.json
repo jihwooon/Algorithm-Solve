@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "lint:fix": "npx prettier --write ./src"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.6.2",
-    "jest-plugin-context": "^2.9.0"
+    "jest-plugin-context": "^2.9.0",
+    "prettier": "3.0.1"
   }
 }
