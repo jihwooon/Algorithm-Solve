@@ -36,9 +36,10 @@ describe('1부터N까지합', () => {
     it('Error를 던진다.', () => {
       try {
         solution(21);
-        throw new Error('자연수 20을 초과했습니다.');
-      } catch (e) {
-        expect(e.message).toBe('자연수 20을 초과했습니다.');
+      } catch (err) {
+        expect(err).toEqual(
+          new Error('자연수 20을 초과했습니다.'),
+        );
       }
     });
   });
