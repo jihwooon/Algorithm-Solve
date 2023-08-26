@@ -18,7 +18,6 @@
  */
 
 const solution = (arr) => {
-  console.log(arr);
   let answer = 'YES';
   stack = [];
   for (let x of arr) {
