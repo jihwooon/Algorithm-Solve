@@ -6,7 +6,7 @@
  * 배열
  * ## 조건
  * 두 배열의 오름차순
- * 
+ *
  * ## 계획
  * 1. 두 배열을 입력받는다.
  * 2. 각 배열의 길이를 구한다
@@ -20,36 +20,37 @@
  * 자바스크립트는 배열 크기가 동적으로 변경이 되어서 크기 조정이 쉽다
  */
 
-const solution = (arr1, arr2) =>{
-    let answer = []
-    let n = arr1.length;
-    let m = arr2.length;
-    let p1 = p2 = 0
+const solution = (arr1, arr2) => {
+  let answer = [];
+  let n = arr1.length;
+  let m = arr2.length;
+  let p1 = (p2 = 0);
 
-    while (p1 < n && p2 < m) {
-        if(arr1[p1] <= arr2[p2]) {
-            answer.push(arr1[p1++])
-        } else {
-            answer.push(arr2[p2++])
-        }
+  while (p1 < n && p2 < m) {
+    if (arr1[p1] <= arr2[p2]) {
+      answer.push(arr1[p1++]);
+    } else {
+      answer.push(arr2[p2++]);
     }
+  }
 
-    while(p1 < n) {
-        answer.push(arr1[p1++])
-    }
+  while (p1 < n) {
+    answer.push(arr1[p1++]);
+  }
 
-    while(p2 < m) {
-        answer.push(arr2[p2++])
-    }
-    
-    return answer
-}
+  while (p2 < m) {
+    answer.push(arr2[p2++]);
+  }
+
+  return answer;
+};
 
 describe('두배열합치기', () => {
-    context('주어진 문자열에 알파벳 대문자가', () => {
-      it('몇 개 포함되어 있는지 찾아라', () => {
-        expect(solution([1,3,5], [2,3,6,7,9])).toStrictEqual([1,2,3,3,5,6,7,9]);
-      });
+  context('주어진 문자열에 알파벳 대문자가', () => {
+    it('몇 개 포함되어 있는지 찾아라', () => {
+      expect(
+        solution([1, 3, 5], [2, 3, 6, 7, 9]),
+      ).toStrictEqual([1, 2, 3, 3, 5, 6, 7, 9]);
     });
   });
-  
+});

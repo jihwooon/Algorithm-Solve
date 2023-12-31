@@ -5,6 +5,11 @@ module.exports = {
       "json",
       "ts"
     ],
+    transform: {
+      '^.+\\.js?$': [
+        '@swc/jest',
+      ],
+    },
     testPathIgnorePatterns: [
       '/node_modules/',
     ],

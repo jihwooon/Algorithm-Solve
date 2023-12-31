@@ -1,0 +1,11 @@
+{
+    "editor.rulers": [
+      80
+    ],
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 2,
+    "editor.insertSpaces": false,
+  }

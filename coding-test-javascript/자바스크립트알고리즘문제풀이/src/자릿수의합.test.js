@@ -5,8 +5,8 @@
  * 자릿수
  * 배열
  * ## 조건
- * 자릿수의 합이 같은 경우 원래 수가 더 큰걸 선택한다.  
- * 
+ * 자릿수의 합이 같은 경우 원래 수가 더 큰걸 선택한다.
+ *
  * ## 계획
  * 1. 함수의 배열 인자값을 전달한다.
  * 2. 배열 값을 루프문으로 값을 꺼낸다.
@@ -19,34 +19,36 @@
  *
  */
 
-const solution = (arr) =>{
-    let answer;
-    let max = Number.MIN_SAFE_INTEGER;
-    for (let x of arr) {
-        let sum = 0;
-        let tmp = x;
-        while(tmp) {
-            sum += tmp % 10
-            tmp = Math.floor(tmp / 10);
-        }
-        if (sum >= max) {
-            max = sum;
-            answer = x;
-        } else if (sum === max) {
-            if (x > answer) {
-                answer = x
-            }
-        }
+const solution = (arr) => {
+  let answer;
+  let max = Number.MIN_SAFE_INTEGER;
+  for (let x of arr) {
+    let sum = 0;
+    let tmp = x;
+    while (tmp) {
+      sum += tmp % 10;
+      tmp = Math.floor(tmp / 10);
     }
+    if (sum >= max) {
+      max = sum;
+      answer = x;
+    } else if (sum === max) {
+      if (x > answer) {
+        answer = x;
+      }
+    }
+  }
 
-    return answer
-}
+  return answer;
+};
 
 describe('자릿수의 합', () => {
-    context('자연수가 주어지고 자연수의 자릿수의 합을 구하면', () => {
+  context(
+    '자연수가 주어지고 자연수의 자릿수의 합을 구하면',
+    () => {
       it('지릿수 합 중 가장 큰 자연수를 구하라', () => {
         expect(solution([128, 202])).toStrictEqual(128);
       });
-    });
-  });
-  
+    },
+  );
+});
